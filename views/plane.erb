@@ -1,0 +1,7 @@
+<main>
+    <h1><%=plane.destination%></h1>
+    <h2><%=plane.passengers.count%> souls on board</h2>
+    <%plane.passengers.each do |passenger|%>
+        <h4><%= passenger.name %></h4>
+    <%end%>
+</main>

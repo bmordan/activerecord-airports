@@ -1,0 +1,16 @@
+<main>
+    <% airports.each do |airport|%>
+        <fieldset>
+            <legend><%= airport.name%></legend>
+            <ul id="<%=airport.name%>">
+                <% airport.planes.each do |plane| %>
+                    <li id="<%=plane.id.to_s%>">
+                      <%=plane.id.to_s+plane.destination%>
+                      (<a href="/plane/<%=plane.id%>"><%=plane.passengers.count%></a>)
+                      <button id="<%=plane.id%>">Take off</button>
+                    </li>
+                <% end %>
+            </ul>
+        </fieldset>
+    <% end %>
+</main>
